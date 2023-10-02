@@ -18,8 +18,8 @@ while i <= 5:
     if x == "yes":
         print("Restarting...")
     elif x == "no":
-        break
+        continue
     else:
-        print("Please enter either yes or no. ")        
+        print("Please enter either yes or no. ")
 i += 1
 
