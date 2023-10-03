@@ -3,6 +3,7 @@
 #conditions.py
 i = 1
 while i <= 5:
+    y = True
     temp = int(input("Please enter the current temperature: "))
     if temp > 90:
         print("Wear Shorts")
@@ -14,12 +15,19 @@ while i <= 5:
         print("Wear a heavy coat")
     else:
         print("Stay Inside")
-    x = str(input("Would you like to enter another temperature? "))  
-    if x == "yes":
-        print("Restarting...")
-    elif x == "no":
-        continue
-    else:
-        print("Please enter either yes or no. ")
-i += 1
 
+    while y:
+        x = str(input("Would you like to enter another temperature? "))  
+        if x == "yes":
+            print("Restarting...")
+            y = False
+        elif x == "no":
+            print("Goodbye!")
+            i = 6
+            y = False
+        else:
+            print("Please enter either yes or no. ")
+    i += 1
+if i > 6:
+    print("Have a nice day!")
+    
